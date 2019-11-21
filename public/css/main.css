@@ -3120,13 +3120,13 @@ img{
 	display:inline-block;
 	width:auto;
 	max-width:100%;
-	opacity:0.4;
+	opacity:1;
 	transition:all 300ms ease;
 	-webkit-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
 }
 
 .sponsors-section .image-box img:hover{
