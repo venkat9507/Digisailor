@@ -11,9 +11,9 @@
 		  var message = document.getElementById("message").value
 		  var subject = document.getElementById("subject").value
 	  Email.send({
-		  SecureToken : "eb56581b-02d4-48e1-934d-63074ff93ca4",
-		  To : "digisailors@gmail.com",
-		  From : "matthew.rufus29@gamil.com",
+		  SecureToken : "47e13ce5-1945-479f-b1c4-4ca5f686b9a9",
+		  To : "",
+		  From : "digisailors@gmail.com",
 		  Subject : subject,
 	  Body :"name="+name +"\nemail=" +email +"\nmessage=" +message
   }).then(
@@ -227,7 +227,7 @@
 						</div>
 
 						<div class="col-lg-12 col-md-12 col-sm-12 text-center form-group">
-							<button class="theme-btn btn-style-four" type="submit" id="submit" name="submit-form" onclick="sendEmail();"><span class="txt">Send Now</span></button>
+							<button class="theme-btn btn-style-four"  type="submit" id="submit" name="submit-form" onclick="sendEmail();"><a href="contact.html"><span class="txt">Send Now</span></a></button>
 						</div>
 
 					</div>
