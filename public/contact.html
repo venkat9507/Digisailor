@@ -3,6 +3,24 @@
 <head>
 <meta charset="utf-8">
 <title>Digisailor</title>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+		function sendEmail() {
+			var name = document.getElementById("name").value
+			var email = document.getElementById("email").value	
+		  var message = document.getElementById("message").value
+		  var subject = document.getElementById("subject").value
+	  Email.send({
+		  SecureToken : "eb56581b-02d4-48e1-934d-63074ff93ca4",
+		  To : "digisailors@gmail.com",
+		  From : "matthew.rufus29@gamil.com",
+		  Subject : subject,
+	  Body :"name="+name +"\nemail=" +email +"\nmessage=" +message
+  }).then(
+	message => alert("Thanks for contacting Digisailor")
+  );
+  }
+	  </script>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
@@ -10,6 +28,7 @@
 
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link href=" https://smtpjs.com/v3/smtp.js">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -188,31 +207,31 @@
 
 			<!-- Contact Form -->
 			<div class="contact-form">
-				<form method="post" action="sendemail.php" id="contact-form">
+				
 					<div class="row clearfix">
 
 						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
-							<input type="text" name="username" placeholder="Name" required>
+							<input type="text" name="username" id="name" placeholder="Name" required>
 						</div>
 
 						<div class="col-lg-6 col-md-6 col-sm-12 form-group">
-							<input type="email" name="email" placeholder="Email" required>
+							<input type="email" name="email" id="email" placeholder="Email" required>
 						</div>
 
 						<div class="col-lg-12 col-md-12 col-sm-12 form-group">
-							<input type="text" name="subject" placeholder="Subject" required>
+							<input type="text" name="subject" id="subject" placeholder="Subject" required>
 						</div>
 
 						<div class="col-lg-12 col-md-12 col-sm-12 form-group">
-							<textarea name="message" placeholder="Message"></textarea>
+							<textarea name="message" id="message" placeholder="Message"></textarea>
 						</div>
 
 						<div class="col-lg-12 col-md-12 col-sm-12 text-center form-group">
-							<button class="theme-btn btn-style-four" type="submit" name="submit-form"><span class="txt">Send Now</span></button>
+							<button class="theme-btn btn-style-four" type="submit" id="submit" name="submit-form" onclick="sendEmail();"><span class="txt">Send Now</span></button>
 						</div>
 
 					</div>
-				</form>
+				
 
 			</div>
 
@@ -442,8 +461,8 @@
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
 
-
-
+<script src="https://api.jquery.com/serialize/"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -460,6 +479,5 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU"></script>
 <script src="js/map-script.js"></script>
 <!--End Google Map APi-->
-
 </body>
 </html>
