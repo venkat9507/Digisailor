@@ -5,26 +5,27 @@
 <title>Digisailor</title>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-		function sendEmail() {
-			var name = document.getElementById("name").value
-			var email = document.getElementById("email").value	
-		  var message = document.getElementById("message").value
-		  var subject = document.getElementById("subject").value
-	  Email.send({
-		  SecureToken : "47e13ce5-1945-479f-b1c4-4ca5f686b9a9",
-		  To : "digisailors@gmail.com",
-		  From : "matthew.rufus29@gmail.com",
-		  Subject : subject,
-	  Body :"name="+name +"\nemail=" +email +"\nmessage=" +message
-  }).then(
-	message => alert("Thanks for contacting Digisailor")
-  );
-  setTimeout(()=>{
-  window.location.reload(true);
-},5000)
-  }
-	  </script>
-<!-- Stylesheets -->
+	function sendEmail() {
+		var name = document.getElementById("name").value
+		var email = document.getElementById("email").value	
+	  var message = document.getElementById("message").value
+	  var subject = document.getElementById("subject").value
+  Email.send({
+	  SecureToken : "eb56581b-02d4-48e1-934d-63074ff93ca4",
+	  To : "digisailors@gmail.com",
+	  From : email,
+	  Subject : subject,
+  Body :"name="+name +"\nemail=" +email +"\nmessage=" +message
+}).then(
+message => alert("Thanks for contacting Digisailor")
+)
+setTimeout(() =>{
+	window.location.reload(true);	
+}, 5000);
+}
+
+
+  </script><!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
