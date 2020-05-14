@@ -12,13 +12,16 @@
 		  var subject = document.getElementById("subject").value
 	  Email.send({
 		  SecureToken : "47e13ce5-1945-479f-b1c4-4ca5f686b9a9",
-		  To : "",
-		  From : "digisailors@gmail.com",
+		  To : "digisailors@gmail.com",
+		  From : "matthew.rufus29@gmail.com",
 		  Subject : subject,
 	  Body :"name="+name +"\nemail=" +email +"\nmessage=" +message
   }).then(
 	message => alert("Thanks for contacting Digisailor")
   );
+  setTimeout(()=>{
+  window.location.reload(true);
+},5000)
   }
 	  </script>
 <!-- Stylesheets -->
@@ -227,7 +230,7 @@
 						</div>
 
 						<div class="col-lg-12 col-md-12 col-sm-12 text-center form-group">
-							<button class="theme-btn btn-style-four"  type="submit" id="submit" name="submit-form" onclick="sendEmail();"><a href="contact.html"><span class="txt">Send Now</span></a></button>
+							<button class="theme-btn btn-style-four"  type="submit" id="submit" name="submit-form" onclick="sendEmail();"><span class="txt">Send Now</span></button>
 						</div>
 
 					</div>
